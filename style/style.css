@@ -1,0 +1,846 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  border-color: rgb(255, 255, 255);
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 1000px;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+  background-image: url('../img/profile image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.in-box{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.main .introduction-container {
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  justify-content: center;
+}
+
+
+.header-ho-pro-con-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 24px 48px; */
+  background-color: #fefcfc;
+  border-bottom: 1px solid #fffdfd;
+  border-radius: 10px;  
+}
+
+/* Left Portfolio Section */
+.portfolio p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.4;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.font-port {
+  font-size: 28px;
+  font-weight: 700;
+  color: #9c97977a;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ho-pro-co {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0%;
+  margin: 10px 10px 10px 10px;
+  /* border: 1px solid black;  */
+  border-radius: 100px;
+
+}
+
+.ho-pro-co span {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  border: 1px solid transparent; /* ensure border space is reserved */
+  border-radius: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  min-width: 120px; /* optional: fixes width */
+  text-align: center;
+}
+
+/* Hover Effect - without changing layout */
+.ho-pro-co span:hover {
+  color: rgb(4, 4, 4);
+  background-color: rgb(252, 248, 248);
+  border-color: rgb(156, 153, 153);
+  box-shadow: #555 0px 0px 10px;
+  
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-ho-pro-con-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+
+  }
+
+  .ho-pro-co {
+    gap: 20px;
+  }
+
+  .font-port {
+    font-size: 24px;
+  }
+}
+
+.container{
+  background-image: url(img\profile\ image.jpg);
+}
+
+.introduction{
+    display: flex;
+    flex-direction: column;
+    min-width: 754px;
+    gap: 25px;
+    /* border: 1px solid black; */
+    padding: 100px 100px 100px;
+}
+
+.hi-name{
+    font-size: 30px;
+    font-family: monospace;
+}
+.fro-dev{
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 6s steps(17) forwards, forwards 0.50s step-start infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 17ch;}
+}
+@keyframes blink {
+    50% { border-color: transparent;}
+}
+
+
+.intro{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-style: oblique;
+    font-size: 24px;
+}
+
+.button-get-brow{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.bb{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 10px 10px 10px ;
+    border-radius: 50px;
+    border-width: 1px;
+    
+}
+.bb:hover{
+  cursor: pointer;
+  background-color: black;
+  text-decoration: #fffdfd;
+  border: 1px solid black;
+  text-decoration-color: #fffdfd;
+  color: wheat;
+}
+
+
+
+
+.resume{
+  font-size: smaller;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding :10px 10px 10px 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(14, 13, 13);
+}
+
+.resume:hover{
+  cursor: pointer;
+  background-color: black;
+  text-decoration: #fffdfd;
+  border: 1px solid black;
+  text-decoration-color: #fffdfd;
+  color: wheat;
+}
+
+.ho-pro-co a{
+  transform: scale(1);
+  transition: transform 0.9s ease-in-out;
+}
+
+.ho-pro-co a:hover{
+  position: relative;
+  right: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+
+/* Responsive design */
+
+/* for small devices */
+@media screen and (max-width: 500px) {
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    gap: 20px;
+    /* border: 1px solid black; */
+    padding: 100px 100px 100px;
+}
+
+.hi-name {
+    font-size: x-small;
+    font-family: monospace;
+}
+
+.fro-dev {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+.intro {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-size: x-small;
+}
+
+.bb {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50px;
+    border-width: 1px;
+}
+.ho-pro-co {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid rgb(205, 201, 201);
+    border-radius: 100px;
+    background-color: rgb(255, 255, 255);
+}
+
+.ho-pro-co span {
+    font-size: 16px;
+    color: #efe6e6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 70px;
+    text-align: center;
+}
+
+
+}
+
+
+
+
+
+/* about section css */
+
+
+
+.about-header {
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+    gap: 10px;
+    
+}
+
+.about-header .icon{
+    font-size: 15px;
+    font-family: serif;
+    color: black;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transform: scaleZ(-1);
+    margin: 2px 2px 2px 2px;
+}
+.about-header .icon:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+
+.about-content {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.about-content .left-part-section {
+    width: 30%;
+    float: left;
+    padding: 20px;  
+    height: 1200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0; /* Sticks while scrolling */
+    
+}
+
+
+
+.about-content .right-part-section {
+    width: 70%;
+    float: right;
+    padding: 20px;
+    height: 1400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid black;
+    flex-grow: 1;
+}
+
+.about-content .left-part-section img {
+    width: 90%;
+    height: auto;
+    position: sticky;
+    z-index: 2; /* Make sure image is on top */
+}
+
+.about-content .left-part-section div {
+    font-size: 24px;
+    float: left;
+    margin: 0%;
+}
+
+.name-text{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 0%;
+    margin: 0%;
+    line-height: 1.25;
+    float: left;
+}
+.name-text h3{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    color: grey;
+}
+
+.short-intro{
+    width: 90%;
+    height: auto;
+    text-align: start;
+    text-size-adjust: auto;
+    font-size: x-small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.social-links {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+    float: left;
+    gap: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.social-links a {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(64, 63, 63);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+    border: 1px solid rgb(45, 44, 44);
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.social-links a:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.title-name-job {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    justify-content: left;
+    gap: 10px;
+}
+
+.title-name-job h1 {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.title-name-job h3 {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.introduction1 {
+    width: 100%;
+    height: auto;
+    text-align: start;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+.introduction1 p, h5{
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: justify;
+
+}
+
+.about-me-intro {
+    width: 100%;
+    height: auto;
+    text-align: start;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-me-intro p, h5 {
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.skills-technology {
+    width: 100%;
+    height: auto;
+    text-align: start;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+.skills-technology p, h5 {
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.professional-experience {
+    width: 100%;
+    height: auto;
+    text-align: start;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 10px 0;
+}
+
+.professional-experience p, h5 {
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.letter-of-recommendation {
+    width: 100%;
+    height: auto;
+    text-align: start;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+.letter-of-recommendation p, h5 {
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.certifications {
+    width: 100%;
+    height: auto;
+    text-align: start;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+.certifications p, h5 {
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.certi-list {
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    padding-left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+@media screen and (max-width: 460px) {
+    .about-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .about-content .left-part-section, 
+    .about-content .right-part-section {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .social-links {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .title-name-job {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .about-content .left-part-section, 
+    .about-content .right-part-section {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .about-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-content .left-part-section div {
+    font-size: 24px;
+    float: left;
+    margin: 0%;
+}
+    
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .title-name-job {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .about-content .left-part-section, 
+    .about-content .right-part-section {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .about-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-content .left-part-section div {
+    font-size: 24px;
+    float: left;
+    margin: 0%;
+}
+    
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .title-name-job {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+
+
+
+/* Section styling */
+#projects {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fdfcfc;
+  color: white;
+  height: 1000px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #010101;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Project Grid */
+.project-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(246, 30, 30, 0.912);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+  border-radius: 15px;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay Info */
+.project-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(4, 4, 4, 0.85);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: bottom 0.4s ease;
+  border-radius: 0 0 15px 15px;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.project-info a {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #00ffcc;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.project-info a:hover {
+  background: #00ffcc;
+  color: black;
+}
+
+/* Show info on hover */
+.project-card:hover .project-info {
+  bottom: 0;
+}
+
+
+/* Ongoing Project Badge */
+.badge {
+  background: #ff3c3c;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+/* Highlight ongoing project card */
+.project-card.ongoing {
+  border: 2px solid #e72b2b;
+  box-shadow: 0 0 20px rgba(246, 30, 30, 0.912);
+  height: 336px;
+}
+
+.project-card.ongoing:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 60, 60, 0.4);
+}
